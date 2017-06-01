@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/btn_level"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:padding="12dp"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+
+        fancy:fb_borderColor="@color/primary"
+        fancy:fb_borderWidth="1dp"
+        fancy:fb_defaultColor="@color/transparent"
+        fancy:fb_focusColor="@color/primary"
+        fancy:fb_fontIconSize="15sp"
+        fancy:fb_iconPosition="right"
+        fancy:fb_radius="30dp"
+        fancy:fb_text="LoginLoginLoginLoginLoginLoginLoginLoginLoginLoginLoginLoginLoginLoginLoginLoginLoginLoginLoginLoginLoginLoginLogin"
+        fancy:fb_textColor="@color/primary">
+
+    </mehdi.sakout.fancybuttons.FancyButton>
+
+    <TextView
+        android:id="@+id/txt_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+
+        android:text="Not Paid"
+        android:background="@color/primary"
+        android:textColor="@color/color_badget"
+        android:textSize="14sp" />
+
+</FrameLayout>

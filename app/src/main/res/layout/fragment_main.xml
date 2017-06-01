@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.snowsea.school.DashBoardActivity">
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.504"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp">
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/btn_courses"
+            android:layout_width="300dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="29dp"
+            android:padding="12dp"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="parent"
+
+            fancy:fb_borderColor="@color/primary"
+            fancy:fb_borderWidth="1dp"
+            fancy:fb_defaultColor="@color/transparent"
+            fancy:fb_focusColor="@color/primary"
+            fancy:fb_fontIconSize="30sp"
+            fancy:fb_iconPosition="left"
+            fancy:fb_fontIconResource="@string/icon_cap"
+            fancy:fb_radius="100dp"
+            fancy:fb_text="@string/courses"
+            fancy:fb_textColor="@color/primary"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="195dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/lblCopyright"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:srcCompat="@drawable/company_logo"
+            app:layout_constraintHorizontal_bias="0.505" />
+
+        <TextView
+            android:id="@+id/lblCopyright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+
+            android:text="@string/copyright"
+            android:textColor="@color/primary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/btn_contactus"
+            android:layout_width="300dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="41dp"
+            android:padding="12dp"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/btn_courses"
+
+            fancy:fb_borderColor="@color/primary"
+            fancy:fb_borderWidth="1dp"
+            fancy:fb_defaultColor="@color/transparent"
+            fancy:fb_focusColor="@color/primary"
+            fancy:fb_fontIconResource="@string/icon_phone"
+            fancy:fb_fontIconSize="30sp"
+            fancy:fb_iconPosition="left"
+            fancy:fb_radius="100dp"
+            fancy:fb_text="@string/contactus"
+            fancy:fb_textColor="@color/primary"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

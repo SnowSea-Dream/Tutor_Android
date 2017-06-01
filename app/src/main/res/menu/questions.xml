@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item android:id="@+id/action_search"
+        android:title="@string/action_search"
+        android:icon="@drawable/ic_menu_search"
+        app:showAsAction="collapseActionView|ifRoom"
+        app:actionViewClass="android.support.v7.widget.SearchView" />
+
+    <item android:title="By Answer">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/action_answer_all"
+                    android:title="All"
+                    android:checked="true"
+                    />
+                <item
+                    android:id="@+id/action_answered"
+                    android:title="Answered"
+                    />
+                <item
+                    android:id="@+id/action_unanswered"
+                    android:title="Not Answered" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="By User">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/action_user_all"
+                    android:title="All"
+                    android:checked="true"
+                    />
+                <item
+                    android:id="@+id/action_user_me"
+                    android:title="Me" />
+            </group>
+        </menu>
+    </item>
+
+
+</menu>

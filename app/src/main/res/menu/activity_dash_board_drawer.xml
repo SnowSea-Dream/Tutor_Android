@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Account">
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_keyboard_backspace_black_24dp"
+                android:title="Log out" />
+        </menu>
+    </item>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_ask"
+                android:icon="@drawable/ic_menu_send"
+                android:visible="false"
+                android:title="Make A Question" />
+            <item
+                android:id="@+id/nav_questions"
+                android:icon="@drawable/ic_question_answer_black_24dp"
+                android:title="Questions and Answers" />
+        </menu>
+    </item>
+
+</menu>

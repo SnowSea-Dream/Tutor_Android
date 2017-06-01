@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#DE5041</color>
+    <color name="primary_dark">#DE5041</color>
+    <color name="primary_darker">#CC5041</color>
+    <color name="accent">#DE5041</color>
+
+    <color name="black">#000000</color>
+    <color name="jet">#222222</color>
+    <color name="oil">#333333</color>
+    <color name="gray">#555555</color>
+    <color name="monsoon">#777777</color>
+    <color name="jumbo">#888888</color>
+    <color name="aluminum">#999999</color>
+    <color name="base">#AAAAAA</color>
+    <color name="iron">#55DE5041</color>
+    <color name="white">#FFFFFF</color>
+    <color name="color_badget">#FFFFFF</color>
+    <color name="green">#41A85F</color>
+    <color name="transparent">@android:color/transparent</color>
+
+</resources>
