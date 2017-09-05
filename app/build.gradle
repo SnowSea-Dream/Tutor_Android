@@ -2,21 +2,16 @@ apply plugin: 'com.android.application'
 
 android {
     signingConfigs {
-        config {
-            keyAlias 'key0'
-            keyPassword 'qnrenclftjd55'
-            storeFile file('D:/Android/Sign.jks')
-            storePassword 'qnrenclftjd55'
-        }
+
     }
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "com.snowsea.school"
+        applicationId "com.snowsea.accountingtutors"
         minSdkVersion 16
         targetSdkVersion 25
-        versionCode 7
-        versionName '1.0'
+        versionCode 9
+        versionName '1.3'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         jackOptions {
             enabled true
@@ -26,7 +21,6 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.config
         }
     }
     compileOptions {

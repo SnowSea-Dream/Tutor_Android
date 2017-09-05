@@ -1,4 +1,4 @@
-package com.snowsea.school;
+package com.snowsea.accountingtutors;
 
 import org.junit.Test;
 
