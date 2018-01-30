@@ -5,6 +5,9 @@
     <string name="login">Login</string>
     <string name="signup">SignUp</string>
 
+    <string name="sendcode">Send Code</string>
+    <string name="reset_password">Reset Password</string>
+
     <string name="ok">OK</string>
     <string name="error">Error</string>
     <string name="yes">Yes</string>
@@ -17,8 +20,10 @@
     <string name="action_search_hint">Search Hint</string>
     <string name="title_dialog_signup_success">Welcome!</string>
     <string name="title_dialog_answered">Answer</string>
-    <string name="msg_dialog_signup_success">User Registered Sucessfully !</string>
+    <string name="msg_dialog_signup_success">User Registered Successfully !</string>
     <string name="msg_dialog_network_error">Network Error !</string>
+    <string name="msg_dialog_sendcode_success">Sent Code Successfully !</string>
+    <string name="msg_dialog_reset_password_success">Reset Password Successfully !</string>
 
     <string name="courses"> Courses</string>
     <string name="contactus"> Contact Us</string>

@@ -50,6 +50,15 @@
                 android:hint="Password"/>
         </android.support.design.widget.TextInputLayout>
 
+        <TextView android:id="@+id/link_forgotpassword"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="Forgot Password ?"
+            android:textAlignment="textEnd"
+            android:gravity="center"
+            android:textSize="16dip"/>
+
         <mehdi.sakout.fancybuttons.FancyButton
             android:id="@+id/btn_login"
             android:layout_width="fill_parent"

@@ -25,7 +25,7 @@ import java.net.URLConnection;
 
 import mehdi.sakout.fancybuttons.FancyButton;
 
-class DownloadFileFromURL extends AsyncTask<String, String, String> {
+class DownloadFileFromURL extends AsyncTask<String, Integer, String> {
 
     /**
      * Before starting background thread
@@ -67,13 +67,13 @@ class DownloadFileFromURL extends AsyncTask<String, String, String> {
 
             byte data[] = new byte[2048];
 
-            //long total = 0;
+            long total = 0;
 
             while ((count = input.read(data)) != -1) {
-                //total += count;
+                total += count;
                 // publishing the progress....
                 // After this onProgressUpdate will be called
-                //publishProgress(""+(int)((total*100)/lenghtOfFile));
+                publishProgress((int)((total*100)/lenghtOfFile));
 
                 // writing data to file
                 output.write(data, 0, count);
@@ -96,9 +96,11 @@ class DownloadFileFromURL extends AsyncTask<String, String, String> {
     /**
      * Updating progress bar
      * */
-    protected void onProgressUpdate(String... progress) {
+    protected void onProgressUpdate(Integer... progress) {
         // setting progress percentage
-        _progressBar.setProgress(Integer.parseInt(progress[0]));
+        _progressBar.setProgress(progress[0]);
+        _btnDownload.setIconResource("");
+        _btnDownload.setText(progress[0].toString() + "%");
     }
 
     /**
@@ -113,6 +115,7 @@ class DownloadFileFromURL extends AsyncTask<String, String, String> {
         from.renameTo(to);
 
         _progressBar.setVisibility(View.GONE);
+        _btnDownload.setText("");
         _btnDownload.setIconResource(context.getResources().getString(R.string.icon_checked));
     }
 

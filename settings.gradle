@@ -1,1 +1,1 @@
-include ':app', ':oppwa.mobile-1.7.0'
+include ':app', ':oppwa.mobile-1.7.0', ':oppwa.mobile-2.9.0'

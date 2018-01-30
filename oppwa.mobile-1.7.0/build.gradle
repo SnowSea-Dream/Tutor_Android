@@ -1,4 +1,0 @@
-configurations.maybeCreate("default")
-artifacts.add("default", file('oppwa.mobile-1.7.0.aar'))
-dependencies {
-}

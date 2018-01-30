@@ -249,12 +249,12 @@ public class SignupActivity extends AppCompatActivity {
             _emailText.setError(null);
         }
 
-        if (mobile.isEmpty() || mobile.length()!=10) {
-            _mobileText.setError("Enter Valid Mobile Number");
-            valid = false;
-        } else {
-            _mobileText.setError(null);
-        }
+//        if (mobile.isEmpty() || mobile.length()!=10) {
+//            _mobileText.setError("Enter Valid Mobile Number");
+//            valid = false;
+//        } else {
+//            _mobileText.setError(null);
+//        }
 
         if (password.isEmpty() || password.length() < 4 || password.length() > 10) {
             _passwordText.setError("between 4 and 10 alphanumeric characters");

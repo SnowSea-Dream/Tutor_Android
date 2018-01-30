@@ -6,7 +6,7 @@ package com.snowsea.accountingtutors.utils;
 
 public class Constants {
     public static final String BASE_URL = "https://tshiamo.herokuapp.com/api/";
-    // public static final String BASE_URL = "http://192.168.1.115:1337/api/";
+//    public static final String BASE_URL = "http://192.168.1.115:1337/api/";
 
     public static final String VIDEO_FOLDER_URL = "";
     public static final String NOTE_FOLDER_URL = "";

@@ -25,6 +25,8 @@ import com.snowsea.accountingtutors.utils.Constants;
 import com.snowsea.accountingtutors.utils.DataManager;
 import com.snowsea.accountingtutors.utils.GlobalData;
 
+import org.w3c.dom.Text;
+
 import java.io.IOException;
 
 import butterknife.BindView;
@@ -47,6 +49,8 @@ public class LoginActivity extends AppCompatActivity {
     FancyButton _loginButton;
     @BindView(R.id.link_signup)
     TextView _signupLink;
+    @BindView(R.id.link_forgotpassword)
+    TextView _forgotLink;
 
     @BindView(R.id.scrollView)
     ScrollView _scrollView;
@@ -84,6 +88,16 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        _forgotLink.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // Start the Signup activity
+                Intent intent = new Intent(getApplicationContext(), ForgotPasswordActivity.class);
+                startActivity(intent);
+            }
+        });
+
         initSharedPreferences();
     }
 
@@ -93,8 +107,6 @@ public class LoginActivity extends AppCompatActivity {
 
 
     public void login() {
-        Log.d(TAG, "Login");
-
         if (!validate()) {
             //onLoginFailed();
             return;

@@ -29,12 +29,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.oppwa.mobile.connect.checkout.dialog.CheckoutActivity;
-import com.oppwa.mobile.connect.exception.PaymentError;
-import com.oppwa.mobile.connect.exception.PaymentException;
-import com.oppwa.mobile.connect.provider.Connect;
-import com.oppwa.mobile.connect.service.ConnectService;
-import com.oppwa.mobile.connect.service.IProviderBinder;
 import com.snowsea.accountingtutors.model.Course;
 import com.snowsea.accountingtutors.model.Student;
 import com.snowsea.accountingtutors.model.Subject;
@@ -574,57 +568,57 @@ public class DashBoardActivity extends AppCompatActivity
         // do nothing, just override
     }
 
-    private IProviderBinder binder;
-    private ServiceConnection serviceConnection = new ServiceConnection() {
-        @Override
-        public void onServiceConnected(ComponentName name, IBinder service) {
-            binder = (IProviderBinder) service;
-        /* we have a connection to the service */
-            try {
-                binder.initializeProvider(Connect.ProviderMode.LIVE);
-            } catch (PaymentException ee) {
-	    /* error occurred */
-            }
-        }
+//    private IProviderBinder binder;
+//    private ServiceConnection serviceConnection = new ServiceConnection() {
+//        @Override
+//        public void onServiceConnected(ComponentName name, IBinder service) {
+//            binder = (IProviderBinder) service;
+//        /* we have a connection to the service */
+//            try {
+//                binder.initializeProvider(Connect.ProviderMode.LIVE);
+//            } catch (PaymentException ee) {
+//	    /* error occurred */
+//            }
+//        }
+//
+//        @Override
+//        public void onServiceDisconnected(ComponentName name) {
+//            binder = null;
+//        }
+//    };
 
-        @Override
-        public void onServiceDisconnected(ComponentName name) {
-            binder = null;
-        }
-    };
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
+//
+//        Intent intent = new Intent(this, ConnectService.class);
+//
+//        startService(intent);
+////        bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE);
+//    }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
+//    @Override
+//    protected void onStop() {
+//        super.onStop();
+//
+////        unbindService(serviceConnection);
+//        stopService(new Intent(this, ConnectService.class));
+//    }
 
-        Intent intent = new Intent(this, ConnectService.class);
-
-        startService(intent);
-        bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE);
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-
-        unbindService(serviceConnection);
-        stopService(new Intent(this, ConnectService.class));
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        switch (resultCode) {
-            case CheckoutActivity.RESULT_OK:
-            /* transaction successful */
-                break;
-            case CheckoutActivity.RESULT_CANCELED:
-            /* shopper canceled the checkout process */
-                break;
-            case CheckoutActivity.RESULT_ERROR:
-            /* error occurred */
-
-                PaymentError error = data.getExtras().getParcelable(CheckoutActivity.CHECKOUT_RESULT_ERROR);
-        }
-    }
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        switch (resultCode) {
+//            case CheckoutActivity.RESULT_OK:
+//            /* transaction successful */
+//                break;
+//            case CheckoutActivity.RESULT_CANCELED:
+//            /* shopper canceled the checkout process */
+//                break;
+//            case CheckoutActivity.RESULT_ERROR:
+//            /* error occurred */
+//
+//                PaymentError error = data.getExtras().getParcelable(CheckoutActivity.CHECKOUT_RESULT_ERROR);
+//        }
+//    }
 }

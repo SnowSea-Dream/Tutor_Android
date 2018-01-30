@@ -16,6 +16,7 @@ public class User {
     private String created_at;
     private String new_password;
     private String token;
+    private String code;
 
     public void setFirstName(String firstName) {
         this.first_name = firstName;
@@ -78,4 +79,8 @@ public class User {
     public void setToken(String token) {
         this.token = token;
     }
+
+    public void setCode(String code) { this.code = code; }
+
+    public String getCode() { return this.code; }
 }
